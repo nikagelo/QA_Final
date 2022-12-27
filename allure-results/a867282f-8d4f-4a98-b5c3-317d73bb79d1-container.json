@@ -1,0 +1,1 @@
+{"uuid":"a867282f-8d4f-4a98-b5c3-317d73bb79d1","name":"QA_Final","children":["e7bcb51b-c899-4ec3-9257-c7ce4f5c0910"],"befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1672147562155,"stop":1672147584263}],"afters":[],"start":1672147562114,"stop":1672147584525}
