@@ -18,6 +18,10 @@ public class SearchPageSteps extends searchPage {
     public SearchPageSteps prices(String min, String max){
         minValue.setValue(min);
         maxValue.setValue(max);
+        float minF = Float.parseFloat(min);
+
+        float maxF = Float.parseFloat(min);
+        Assert.assertTrue(minF<=maxF);
         return this;
     }
     public SearchPageSteps filter(){
@@ -44,24 +48,24 @@ public class SearchPageSteps extends searchPage {
         bosch.click();
         return this;
     }
-    public  SearchPageSteps checkPrices(){
-       int count = $$(byClassName("product-item")).size();
-        System.out.println(count);
-        String firstPrice = $(byClassName("gramage-price-p"),0).getText();
-        System.out.println(firstPrice);
-        firstPrice.replace("₾", "0");
-        System.out.println(firstPrice);
-
-        float firstPriceFloat = Float.parseFloat((firstPrice));
-        for (int i = 1; i<count; i++){
-            String secondPrice = $(byClassName("gramage-price-p"),i).getText();
-            System.out.println(secondPrice);
-            float secondPriceFloat = Float.parseFloat((secondPrice));
-            Assert.assertTrue(firstPriceFloat<=secondPriceFloat);
-            firstPrice = secondPrice;
-        }
-        return this;
-    }
+//    public  SearchPageSteps checkPrices(){
+//       int count = $$(byClassName("product-item")).size();
+//        System.out.println(count);
+//        String firstPrice = $(byClassName("gramage-price-p"),0).getText();
+//        System.out.println(firstPrice);
+//        firstPrice.replaceAll("₾", "0");
+//        System.out.println(firstPrice);
+//
+//        float firstPriceFloat = Float.parseFloat((firstPrice));
+//        for (int i = 1; i<count; i++){
+//            String secondPrice = $(byClassName("gramage-price-p"),i).getText();
+//            System.out.println(secondPrice);
+//            float secondPriceFloat = Float.parseFloat((secondPrice));
+//            Assert.assertTrue(firstPriceFloat<=secondPriceFloat);
+//            firstPrice = secondPrice;
+//        }
+//        return this;
+//    }
 
 
 

@@ -8,8 +8,7 @@ public class MainPage  extends RegPage{
     public  SelenideElement cart = $(byCssSelector(".icart")),
     cartIsEmptyTxt = $(byText("კალათა ცარიელია")),
     authorisation = $(byLinkText("ავტორიზაცია")),
-    authorisationTxt = $(byText("\n" +
-            "                            გაიარეთ რეგისტრაცია                        ")),
+    authorisationTxt = $(byText("გაიარეთ რეგისტრაცია")),
     emailInput = $(byName("login_email")),
     recoveryBtn = $(byClassName("recovery-btn")),
     resetEmailInput = $(byName("reset_email")),

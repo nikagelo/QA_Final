@@ -15,7 +15,7 @@ public class testCase4 extends ChromeRunner {
         steps.clickOnSeeAllBtn()
                 .clickOnBrand()
                 .filter()
-                .maxToMin()
-                .checkPrices();
+                .maxToMin();
+//                .checkPrices();
     }
 }
